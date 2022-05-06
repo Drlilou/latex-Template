@@ -1,0 +1,65 @@
+\documentclass[a4paper, 12pt, oneside]{report}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% A choisir l'un des deux packages suivants selon si vous êtes sous Linux ou bien Windows %%%
+\usepackage[utf8]{inputenc} % linux
+%\usepackage[latin1]{inputenc} % windows
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[frenchb]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage[Lenny]{fncychap}
+
+\linespread{1.5}
+
+%\pagestyle{fancy}
+\begin{document}
+	\pagestyle{empty}
+%\input{Structure_rapport_PFE.tex}	
+%\pagestyle{fancy}
+\input{page_garde.tex}
+\pagestyle{empty}
+\input{remerciement.tex}
+\newpage
+\input{dedicaces1.tex}
+\newpage
+\newpage
+\input{dedicaces2.tex}
+\newpage
+\pagestyle{fancy}
+\pagenumbering{roman}
+\lhead{}
+\rhead{\textit{Table des matières}}
+\addcontentsline{toc}{chapter}{Table des matières}
+\tableofcontents{}
+\newpage
+\lhead{}
+\rhead{\textit{Table des figures}}
+\addcontentsline{toc}{chapter}{Table des figures}
+\listoffigures{}
+\newpage
+\newpage
+\lhead{}
+\rhead{\textit{Liste des tableaux}}
+\addcontentsline{toc}{chapter}{Liste des tableaux}
+\listoftables
+\newpage
+\input{liste_abreviations.tex}
+\newpage
+\pagenumbering{arabic}
+\input{introduction.tex}
+\input{chapitre1.tex}
+\input{chapitre2.tex}
+\input{chapitre3.tex}
+\input{conclusion.tex}
+\input{biblio.tex}
+\newpage
+\appendix
+\input{annexeA.tex}
+\input{annexeB.tex}
+\pagestyle{empty}
+\newpage
+\input{resume.tex}
+\end{document}
